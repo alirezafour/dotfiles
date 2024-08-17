@@ -1,0 +1,20 @@
+*
+
+!*/
+
+
+# alowed
+!.gitignore
+!.gitmodules
+!.gitattributes
+
+
+!.zshrc
+
+!.config/nvim
+
+!.config/alacritty
+
+!.config/oh-my-posh
+
+!.config/i3
