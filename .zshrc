@@ -61,7 +61,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias vim='nvim'
 alias vi='nvim'
-alias cat='bat'
 alias c='clear'
 
 # fzf
