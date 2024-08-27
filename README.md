@@ -12,6 +12,8 @@ fzf-tab
 neovim  
 i3  
 brave  
+autotiling
+picom
 
 ## isntall
 1. clone the repo to `~/.dotfiles`  
