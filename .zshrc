@@ -66,3 +66,8 @@ alias c='clear'
 # fzf
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+export CC="clang"
+export CXX="clang++"
+
+export TERM=xterm-256color

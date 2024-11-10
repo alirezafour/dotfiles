@@ -295,6 +295,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+b exec --no-startup-id brave
+bindsym $mod+c exec --no-startup-id brave https://chatgpt.com
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
@@ -334,7 +335,7 @@ assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Xfce4-terminal] focus
+for_window [class=terminal] focus
 for_window [class=(?i)brave] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
@@ -404,8 +405,8 @@ exec_always --no-startup-id autotiling
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
-# exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.pn
+# exec --no-startup-id sleep 1 && nitrogen --restore
+exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -460,6 +461,7 @@ exec --no-startup-id sleep 2 && alacritty
 # floating rules #
 ##################
 for_window [class="awakened-poe-trade"] floating enable
+for_window [class="MyApp"] floating enable
 
 # set floating (nontiling) for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
