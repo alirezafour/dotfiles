@@ -70,6 +70,10 @@ floating_modifier $mod
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
+# move workspace left/right
+bindsym $mod+Shift+x move workspace to output right
+bindsym $mod+Shift+z move workspace to output left
+
 # switch to workspace
 bindcode $mod+10    workspace  $ws1
 bindcode $mod+11    workspace  $ws2
@@ -294,8 +298,8 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+b exec --no-startup-id brave
-bindsym $mod+c exec --no-startup-id brave https://chatgpt.com
+bindsym $mod+b exec --no-startup-id brave --password-store=basic
+bindsym $mod+c exec --no-startup-id brave https://chatgpt.com --password-store=basic
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
@@ -386,7 +390,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 
 # auto tiling
-exec_always --no-startup-id autotiling
+exec_always autotiling -w 1 3 5 7 9
 
 # start welcome app
 #exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
@@ -461,7 +465,7 @@ exec --no-startup-id sleep 2 && alacritty
 # floating rules #
 ##################
 for_window [class="awakened-poe-trade"] floating enable
-for_window [class="MyApp"] floating enable
+# for_window [class="MyApp"] floating enable
 
 # set floating (nontiling) for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
