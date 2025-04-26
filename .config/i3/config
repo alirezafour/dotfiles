@@ -299,7 +299,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+b exec --no-startup-id brave --password-store=basic
-bindsym $mod+c exec --no-startup-id brave https://chatgpt.com --password-store=basic
+bindsym $mod+c exec --no-startup-id brave https://aistudio.google.com --password-store=basic
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)

@@ -54,7 +54,7 @@ zstyle ':fzf-tab:completion:__zoxide_z:*' fzf-preview 'ls --color=always $realpa
 
 # alias
 alias ls='ls --color=auto'
-alias ll='ls -alF'
+alias ll='ls -alF --block-size=MB'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
@@ -78,8 +78,6 @@ eval "$(zoxide init --cmd cd zsh)"
 export CC="clang"
 export CXX="clang++"
 
-# PATH for my db
-export PATH=$HOME/code/cpp/cppLLM/Vynna/postgres/db:$PATH
 
 #ROCm PATH
 PATH_ROCM="/opt/rocm:/opt/rocm/lib:/opt/rocm/share:/opt/rocm/bin" # only enable if you have rocm installed
@@ -97,10 +95,10 @@ export ROCR_VISIBLE_DEVICES=0
 export TRITON_USE_ROCM=1
 
 #ROCm acrchitectures and overrides
-export AMDGPU_TARGET=gfx1100
-export HCC_AMDGPU_TARGET=gfx1100
-export PYTORCH_ROCM_ARCH=gfx1100
-export HSA_OVERRIDE_GFX_VERSION=11.0.0
+export AMDGPU_TARGET=gfx1102
+export HCC_AMDGPU_TARGET=gfx1102
+export PYTORCH_ROCM_ARCH=gfx1102
+export HSA_OVERRIDE_GFX_VERSION=11.0.2
 export ROCM_PATH="/opt/rocm"
 export ROCM_HOME="/opt/rocm"
 export HIP_PLATFORM=amd
